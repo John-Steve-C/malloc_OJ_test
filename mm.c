@@ -75,8 +75,8 @@
 #define PREV_BLOCK(bp) ((char *) (bp) - GET_SIZE(((char *) (bp) - DSIZE)))
 
 // choose which kind of fit
-//#define FIRST_FIT
-#define NEXT_FIT
+#define FIRST_FIT
+//#define NEXT_FIT
 
 // point at the pos after the prologue block (size = 2 * WSIZE)
 char *heap_list;
