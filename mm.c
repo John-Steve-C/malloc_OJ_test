@@ -212,7 +212,7 @@ static void place(void *bp, size_t size) {
     size_t csize = GET_SIZE(HEADER(bp));
     remove_free_block(bp);
 
-    if ((csize - size) >= (2*BSIZE)) {
+    if ((csize - size) >= (BSIZE)) {
         // split
         SET(HEADER(bp), PACK(size,1));
         SET(FOOTER(bp), PACK(size,1));
